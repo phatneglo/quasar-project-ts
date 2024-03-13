@@ -69,12 +69,6 @@ module.exports = configure(function (ctx) {
         API: ctx.dev
           ? 'http://localhost:8000'
           : 'https://dev3.aitbs.ph/mng/api',
-        CHAT_API: ctx.dev
-          ? 'http://localhost:8000'
-          : 'https://dev3.aitbs.ph/chatApi',
-        PLUGINS_API: ctx.dev
-          ? 'https://dev3.aitbs.ph/plugins/api.js'
-          : 'https://dev3.aitbs.ph/plugins/api.js',
         COOKIES_TOKEN_NAME: 'app_token',
       },
       // analyze: true,
