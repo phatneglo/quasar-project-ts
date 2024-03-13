@@ -1,42 +1,93 @@
 <template>
-  <q-page class="row items-center justify-evenly">
-    <example-component
-      title="Example component"
-      active
-      :todos="todos"
-      :meta="meta"
-    ></example-component>
+  <q-page class="q-pa-md">
+    <div class="row q-col-gutter-md">
+      <div class="col-xs-12 col-sm-6 col-md-3">
+        <q-banner class="bg-primary text-white">
+          <q-avatar icon="people" background-color="white" color="primary" />
+          <div>
+            <div class="text-h6">Users</div>
+            <div class="text-h2">1,234</div>
+          </div>
+        </q-banner>
+      </div>
+
+      <div class="col-xs-12 col-sm-6 col-md-3">
+        <q-banner class="bg-secondary text-white">
+          <q-avatar
+            icon="post_add"
+            background-color="white"
+            color="secondary"
+          />
+          <div>
+            <div class="text-h6">Posts</div>
+            <div class="text-h2">567</div>
+          </div>
+        </q-banner>
+      </div>
+
+      <div class="col-xs-12 col-sm-6 col-md-3">
+        <q-banner class="bg-tertiary text-white">
+          <q-avatar icon="comment" background-color="white" color="tertiary" />
+          <div>
+            <div class="text-h6">Comments</div>
+            <div class="text-h2">8,910</div>
+          </div>
+        </q-banner>
+      </div>
+
+      <div class="col-xs-12 col-sm-6 col-md-3">
+        <q-banner class="bg-quaternary text-white">
+          <q-avatar
+            icon="favorite"
+            background-color="white"
+            color="quaternary"
+          />
+          <div>
+            <div class="text-h6">Likes</div>
+            <div class="text-h2">1,112</div>
+          </div>
+        </q-banner>
+      </div>
+    </div>
+
+    <div class="row q-mt-md">
+      <div class="col-xs-12 col-md-6">
+        <q-card>
+          <q-card-section>
+            <div class="text-h6">Recent Posts</div>
+            <!-- Add recent posts here -->
+          </q-card-section>
+        </q-card>
+      </div>
+
+      <div class="col-xs-12 col-md-6">
+        <q-card>
+          <q-card-section>
+            <div class="text-h6">Recent Comments</div>
+            <!-- Add recent comments here -->
+          </q-card-section>
+        </q-card>
+      </div>
+    </div>
   </q-page>
 </template>
 
-<script setup lang="ts">
-import { Todo, Meta } from 'components/models';
-import ExampleComponent from 'components/ExampleComponent.vue';
-import { ref } from 'vue';
+<script setup lang="ts"></script>
 
-const todos = ref<Todo[]>([
-  {
-    id: 1,
-    content: 'ct1'
-  },
-  {
-    id: 2,
-    content: 'ct2'
-  },
-  {
-    id: 3,
-    content: 'ct3'
-  },
-  {
-    id: 4,
-    content: 'ct4'
-  },
-  {
-    id: 5,
-    content: 'ct5'
-  }
-]);
-const meta = ref<Meta>({
-  totalCount: 1200
-});
-</script>
+<style scoped>
+.bg-primary {
+  background-color: #42a5f5;
+}
+
+.bg-secondary {
+  background-color: #66bb6a;
+}
+
+.bg-tertiary {
+  background-color: #ef5350;
+}
+
+.bg-quaternary {
+  background-color: #ab47bc;
+}
+</style>

@@ -11,7 +11,7 @@
           @click="toggleLeftDrawer"
         />
 
-        <q-toolbar-title> Quasar App </q-toolbar-title>
+        <q-toolbar-title> Todo App </q-toolbar-title>
 
         <div>Quasar v{{ $q.version }}</div>
       </q-toolbar>
@@ -42,6 +42,12 @@ import EssentialLink, {
 } from 'components/EssentialLink.vue';
 
 const essentialLinks: EssentialLinkProps[] = [
+  {
+    title: 'Home',
+    caption: 'Home Page',
+    icon: 'home',
+    link: '/#/',
+  },
   {
     title: 'Login',
     caption: 'Login Page',
