@@ -55,10 +55,19 @@ const register = async () => {
     });
     router.push('/login');
   } catch (error) {
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    const err = error as any;
+    const errorMessage =
+      err.response?.data?.detail
+        ?.map(
+          (e: { loc: string[]; msg: string }) =>
+            `${e.loc[e.loc.length - 1]}: ${e.msg}`
+        )
+        .join(', ') || 'Registration failed';
     $q.notify({
       color: 'negative',
       position: 'top',
-      message: 'Registration failed',
+      message: errorMessage,
       icon: 'report_problem',
     });
   }

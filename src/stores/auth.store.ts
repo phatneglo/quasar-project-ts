@@ -77,11 +77,7 @@ export const useAuthStore = defineStore('authStore', {
     },
 
     async register(userData: UserRegistration) {
-      try {
-        await AuthService.register(userData);
-      } catch (error) {
-        // Handle error
-      }
+      await AuthService.register(userData);
     },
 
     logout() {

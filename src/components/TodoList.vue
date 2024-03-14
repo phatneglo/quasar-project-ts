@@ -41,7 +41,7 @@ import { Todo } from '../models/todo.model';
 import TodoAddForm from './TodoAddForm.vue';
 import TodoUpdateForm from './TodoUpdateForm.vue';
 const emit = defineEmits(['addTodo', 'updateTodo', 'deleteTodo']);
-const props = defineProps({
+defineProps({
   todos: {
     type: Array as () => Todo[],
     required: true,
