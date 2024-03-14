@@ -32,7 +32,6 @@ env: {
 
 ## Project Structure
 
-- `.quasar`: This directory is generated automatically by Quasar CLI. It contains build artifacts and should not be edited manually.
 - `.vscode`: This directory contains settings for Visual Studio Code.
 - `node_modules`: This directory contains all the npm packages required for the project.
 - `public`: This directory contains static assets that are copied to the root of the dist folder on build.
