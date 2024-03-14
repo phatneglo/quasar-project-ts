@@ -9,7 +9,7 @@ export const AuthService = {
       },
     });
     if (response.status !== 200) {
-      throw new Error(response.data.details);
+      throw new Error(response.data.detail);
     }
 
     return response.data;
@@ -18,7 +18,7 @@ export const AuthService = {
   async register(userData: UserRegistration) {
     const response = await api.post('/user/register', userData);
     if (response.status !== 200) {
-      throw new Error(response.data.details);
+      throw new Error(response.data.detail);
     }
     return response.data;
   },
